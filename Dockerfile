@@ -81,4 +81,4 @@ ENV CFG_RESTORE_DEFAULT=1 \
     CFG_SETTINGS_GAME_TYPE="coop,realism"
 
 # Set Entrypoint
-ENTRYPOINT ["/bin/bash", "-c", "exec /.Entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/.Entrypoint.sh"]
