@@ -24,3 +24,13 @@ Base
            │     └── Full-Squash
            └── Full
 ```
+
+## Weekly Build Schedule
+
+To ensure consistent and reliable output, builds are executed according to the following weekly schedule:
+
+* **Monday**: Build `Base`
+* **Tuesday**: Compile `Default`
+* **Wednesday**: Compile `StaticAssets`
+* **Thursday**: Compile `StaticAssets-Squash` and `Full`
+* **Friday**: Compile `Full-Squash`
