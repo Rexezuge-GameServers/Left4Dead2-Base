@@ -10,10 +10,6 @@ if [ "$CFG_RESTORE_DEFAULT" = 1 ]; then
 sv_region 255
 motd_enabled 0
 
-// Initial Level
-map "c14m1_junkyard"
-z_difficulty expert
-
 // Game Settings
 sv_consistency 0
 sv_voiceenable 0
@@ -59,6 +55,8 @@ if [ "$SRV_LAUNCH_SERVER" = 1 ]; then
     +hostname "$CFG_INFORMATION_HOSTNAME" \
     +sv_steamgroup "$CFG_INFORMATION_STEAM_GROUP" \
     +sv_gametypes "$CFG_SETTINGS_GAME_TYPE" \
+    +map "c14m1_junkyard" \
+    +z_difficulty expert \
     $( [ "$SRV_SECURE_SERVER" = 1 ] && echo "-secure" || echo "-insecure" ) \
     -noipx \
     </dev/null
