@@ -72,7 +72,6 @@ EXPOSE 27015/udp
 
 # Environment(s)
 ENV SRV_PORT=27015 \
-    SRV_MAP="c14m1_junkyard" \
     SRV_SECURE_SERVER=1 \
     SRV_LAUNCH_SERVER=1
 ENV CFG_RESTORE_DEFAULT=1 \
