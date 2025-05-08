@@ -61,5 +61,5 @@ if [ "$SRV_LAUNCH_SERVER" = 1 ]; then
     +sv_gametypes "$CFG_SETTINGS_GAME_TYPE" \
     $( [ "$SRV_SECURE_SERVER" = 1 ] && echo "-secure" || echo "-insecure" ) \
     -noipx \
-    </dev/null 2>/dev/null
+    </dev/null
 fi
