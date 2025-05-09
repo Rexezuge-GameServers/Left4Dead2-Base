@@ -4,15 +4,16 @@
 
 This container (`Base`) serves as the foundational layer for all Left4Dead2 dedicated server image variants, providing shared dependencies and a consistent build environment.
 
-**It is not intended to be executed directly**. Instead, it provides essential dependencies for upper layers in the build process.
+⚠️ This image is not intended to be executed directly. Instead, it provides essential dependencies for upper layers in the build process.
 
-## Execution Notes
+## Executable Variants
 
-While the `Base` container itself is not runnable, the following target containers built on top of it **can be executed**:
+The following containers are built on top of `Base` and are designed to be run:
 
-- `Default (no extension)`: The standard asset layer without any compression or post-processing.
-- `Full`: The full version of the static assets, uncompressed.
-- `Full-Squash`: A compressed and merged version optimized for production deployment.
+* Default (no extension): Standard game server with customer-managed releases and minimal modifications.
+* Full: Game server with centrally managed full content, including all maps and assets.
+* Full-Squash: Optimized production image with merged layers and full compressed assets.
+* Full-Slim: A lighter version of Full, with select assets removed for streamlined deployments.
 
 ## Dependency Tree
 
@@ -22,15 +23,17 @@ Base
       └── StaticAssets
            ├── StaticAssets-Squash
            │     └── Full-Squash
-           └── Full
+           ├── Full
+           └── StaticAssets-Slim
+                 └── Full-Slim
 ```
 
 ## Weekly Build Schedule
 
-To ensure consistent and reliable output, builds are executed according to the following weekly schedule:
+Builds are executed on a fixed weekly cycle to ensure consistency and allow time for testing and validation across the stack:
 
-* **Monday**: Build `Base`
-* **Tuesday**: Compile `Default`
-* **Wednesday**: Compile `StaticAssets`
-* **Thursday**: Compile `StaticAssets-Squash` and `Full`
-* **Friday**: Compile `Full-Squash`
+* Monday: Build Base
+* Tuesday: Compile Default
+* Wednesday: Compile StaticAssets
+* Thursday: Compile StaticAssets-Squash, StaticAssets-Slim, and Full
+* Friday: Compile Full-Squash and Full-Slim
