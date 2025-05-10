@@ -14,6 +14,7 @@ The following containers are built on top of `Base` and are designed to be run:
 * Full: Game server with centrally managed full content, including all maps and assets.
 * Full-Squash: Optimized production image with merged layers and full compressed assets.
 * Full-Slim: A lighter version of Full, with select assets removed for streamlined deployments.
+* Full-Slim-Squash: The most compact production image combining the asset-reduced structure of Full-Slim with layer squashing and compression. Ideal for constrained environments where storage, bandwidth, or startup performance is a critical consideration.
 
 ## Dependency Tree
 
