@@ -25,15 +25,20 @@ Base
            │     └── Full-Squash
            ├── Full
            └── StaticAssets-Slim
-                 └── Full-Slim
+                 ├── Full-Slim
+                 └── StaticAssets-Slim-Squash
+                       └── Full-Slim-Squash
 ```
 
 ## Weekly Build Schedule
 
 Builds are executed on a fixed weekly cycle to ensure consistency and allow time for testing and validation across the stack:
 
-* Monday: Build Base
-* Tuesday: Compile Default
-* Wednesday: Compile StaticAssets
-* Thursday: Compile StaticAssets-Squash, StaticAssets-Slim, and Full
-* Friday: Compile Full-Squash and Full-Slim
+| Day          | Build Targets                                          |
+| ------------ | ------------------------------------------------------ |
+| Monday       | `Base`                                                 |
+| Tuesday      | `Default`                                              |
+| Wednesday    | `StaticAssets`                                         |
+| Thursday     | `StaticAssets-Squash`, `StaticAssets-Slim`, `Full`     |
+| Friday       | `Full-Squash`, `Full-Slim`, `StaticAssets-Slim-Squash` |
+| Saturday     | `Full-Slim-Squash`                                     |
