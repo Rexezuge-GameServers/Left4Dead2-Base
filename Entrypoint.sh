@@ -23,12 +23,12 @@ sv_logecho 0
 sv_logfile 0
 
 // Network Performance
-rate 15000
+rate 20000
 sv_minrate 4000
-sv_maxrate 15000
+sv_maxrate 16000
 sv_mincmdrate 15
-sv_maxcmdrate 30
-sv_minupdaterate 10
+sv_maxcmdrate 20
+sv_minupdaterate 15
 sv_maxupdaterate 20
 
 // Security
@@ -41,7 +41,7 @@ sv_allow_wait_command 0
 sv_timeout 60
 sv_maxplayers 4
 sv_forcepreload 1
-fps_max 45
+fps_max 30
 EOF
 fi
 
@@ -52,13 +52,14 @@ if [ "$SRV_LAUNCH_SERVER" = 1 ]; then
   exec ./srcds_linux \
     -console \
     -game left4dead2 \
-    -port "$SRV_PORT" \
+    -port $SRV_PORT \
+    -tickrate 30 \
+    -noipx \
+    $( [ "$SRV_SECURE_SERVER" = 1 ] && echo "-secure" || echo "-insecure" ) \
     +map "c14m1_junkyard" \
     +hostname "$CFG_INFORMATION_HOSTNAME" \
     +sv_steamgroup "$CFG_INFORMATION_STEAM_GROUP" \
     +sv_gametypes "$CFG_SETTINGS_GAME_TYPE" \
     +z_difficulty expert \
-    $( [ "$SRV_SECURE_SERVER" = 1 ] && echo "-secure" || echo "-insecure" ) \
-    -noipx \
     </dev/null
 fi
