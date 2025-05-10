@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Terminate the Script on Failure
+set -e
+
 # Runs the Container CMD
 "$@"
 
