@@ -16,19 +16,20 @@ sv_voiceenable 0
 sv_pausable 0
 director_no_human_zombies 1
 sv_versus_swapteams 1
+mp_disable_autokick 1
 
 // Logging
-sv_logecho 1
+sv_logecho 0
 sv_logfile 0
 
 // Network Performance
-rate 20000
-sv_minrate 5000
-sv_maxrate 20000
-sv_mincmdrate 20
-sv_maxcmdrate 40
-sv_minupdaterate 15
-sv_maxupdaterate 30
+rate 15000
+sv_minrate 4000
+sv_maxrate 15000
+sv_mincmdrate 15
+sv_maxcmdrate 30
+sv_minupdaterate 10
+sv_maxupdaterate 20
 
 // Security
 sv_cheats 0
@@ -38,9 +39,9 @@ sv_allow_wait_command 0
 
 // Stability and Performance
 sv_timeout 60
-sv_maxplayers 8
+sv_maxplayers 4
 sv_forcepreload 1
-fps_max 60
+fps_max 45
 EOF
 fi
 
