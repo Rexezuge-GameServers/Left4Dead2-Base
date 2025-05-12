@@ -59,6 +59,7 @@ if [ "$SRV_LAUNCH_SERVER" = 1 ]; then
     -tickrate 30 \
     -noipx \
     -nobreakpad \
+    -nocrashdialog \
     $( [ "$SRV_SECURE_SERVER" = 1 ] && echo "-secure" || echo "-insecure" ) \
     +map "c14m1_junkyard" \
     +hostname "$CFG_INFORMATION_HOSTNAME" \
