@@ -16,7 +16,7 @@ motd_enabled 0
 // Game Settings
 sv_consistency 0
 sv_voiceenable 0
-sv_pausable 0
+sv_pausable 1
 director_no_human_zombies 1
 sv_versus_swapteams 1
 mp_disable_autokick 1
