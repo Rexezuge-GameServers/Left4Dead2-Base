@@ -49,6 +49,7 @@ COPY --from=runtime / /
 
 # Change User
 USER steam
+WORKDIR /home/steam
 
 # Port Forwarding
 #   Only Game Server Port is Open by Default
