@@ -61,7 +61,7 @@ if [ "$SRV_LAUNCH_SERVER" = 1 ]; then
     -nobreakpad \
     -nocrashdialog \
     $( [ "$SRV_SECURE_SERVER" = 1 ] && echo "-secure" || echo "-insecure" ) \
-    +map "c14m1_junkyard" \
+    +map "credits" \
     +hostname "$CFG_INFORMATION_HOSTNAME" \
     +sv_steamgroup "$CFG_INFORMATION_STEAM_GROUP" \
     +sv_gametypes "$CFG_SETTINGS_GAME_TYPE" \
