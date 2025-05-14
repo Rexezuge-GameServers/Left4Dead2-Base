@@ -43,7 +43,7 @@ sv_allow_wait_command 0
 // Stability and Performance
 sv_timeout 60
 sv_maxplayers 4
-sv_forcepreload 1
+sv_forcepreload 0
 fps_max 30
 EOF
 fi
