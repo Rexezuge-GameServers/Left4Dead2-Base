@@ -35,15 +35,15 @@ Base
 └── Default (no extension)
     └── StaticAssets
         ├── Full
-        ├── StaticAssets-Squash
-        │   └── Full-Squash
-        ├── StaticAssets-Unpacked-NoDLC3
-        ├── StaticAssets-Unpacked-DLC3
-        │   └── StaticAssets-Unpacked-Merged
-        │       └── StaticAssets-Slim
-        │           ├── Full-Slim
-        │           └── StaticAssets-Slim-Squash
-        │               └── Full-Slim-Squash
+        ├── StaticAssets-Squash (Deprecated)
+        │   └── Full-Squash (Deprecated)
+        ├── StaticAssets-Unpacked-NoDLC3 (Deprecated)
+        ├── StaticAssets-Unpacked-DLC3 (Deprecated)
+        │   └── StaticAssets-Unpacked-Merged (Deprecated)
+        │       └── StaticAssets-Slim (Deprecated)
+        │           ├── Full-Slim (Deprecated)
+        │           └── StaticAssets-Slim-Squash (Deprecated)
+        │               └── Full-Slim-Squash (Deprecated)
 ```
 
 ## Weekly Build Schedule
